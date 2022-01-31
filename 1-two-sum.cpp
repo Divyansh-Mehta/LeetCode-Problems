@@ -26,13 +26,17 @@ public:
 //Approach - 2
 //Time:- O(n)
 //Space:- O(n)
-class Solution {
+class Solution
+{
 public:
-    vector<int> twoSum(vector<int>& nums, int target) {
+    vector<int> twoSum(vector<int> &nums, int target)
+    {
         unordered_map<int, int> hMap;
         vector<int> ans;
-        for (int i = 0; i < nums.size(); i++){
-            if (hMap.count(target - nums[i]) > 0){
+        for (int i = 0; i < nums.size(); i++)
+        {
+            if (hMap.count(target - nums[i]) > 0)
+            {
                 ans.push_back(hMap[target - nums[i]]);
                 ans.push_back(i);
             }
@@ -42,11 +46,13 @@ public:
     }
 };
 
-int main(){
+int main()
+{
     vector<int> nums;
     int n;
     cin >> n;
-    for (int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++)
+    {
         int no;
         cin >> no;
         nums.push_back(no);
