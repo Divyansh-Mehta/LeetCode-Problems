@@ -16,10 +16,7 @@ public:
                 j++;
             }
         }
-        if (j == popped.size()){
-            return true;
-        }
-        return false;
+        return j == popped.size();
     }
 };
 
